@@ -1,55 +1,44 @@
-import { Link } from 'expo-router';
 import React from 'react';
-import { View, Text, StyleSheet, Image, } from 'react-native';
+import { View, Text, Image, Button, StyleSheet } from 'react-native';
+import Sobre from './corpo/sobre';
 
-export default function HomeScreen() {
-  
+const Header = () => {
   return (
-    <View style={{backgroundColor: 'red', padding: 20}}>
-      <Text >
-        CineArt Ingressos Online
-      </Text>
+    <View style={styles.header}>
+      <Image
+        source={{ uri: 'logo.png' }}
+        style={styles.logo}
+      />
       <View>
-        <Image source={require('./img/bloco.png')} style={{width: 100, height: 100}}/>
+        
+      </View>
+      <View style={styles.botoesContainer}>
+        <Button title="Entrar" onPress={() => alert('Entrar clicado')} />
+        <Button title="Login" onPress={() => alert('Login clicado')} />
       </View>
       
     </View>
-    
-    
 
   );
-}
+};
+
 
 const styles = StyleSheet.create({
-  meuBotao: {
-    margin: 20
-  },
-  container: {
-    flex: 1,
-    flexDirection:'column',
-    justifyContent: 'center',
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
+    padding: 10,
+    backgroundColor: 'blue',
   },
   logo: {
-    width: 250,
-    height: 250,
-  },
-  input: {
+    width: 40,
     height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
   },
-  title: {
-    marginTop: 16,
-    paddingVertical: 8,
-    borderWidth: 4,
-    borderColor: '#20232a',
-    borderRadius: 6,
-    backgroundColor: '#61dafb',
-    color: '#20232a',
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
+  botoesContainer: {
+    flexDirection: 'row',
   },
 });
+
+export default Header;
+
