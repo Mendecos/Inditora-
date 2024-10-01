@@ -1,6 +1,9 @@
 import React from 'react';
 import { View, Text, Image, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import Sobre from './corpo/sobre';
+import Carrosel from './carrosel/carrosel'
+import Catalogo from './catalogo/catalogo';
+
 
 const Header = () => {
   return (
@@ -34,11 +37,12 @@ const Header = () => {
           <TouchableOpacity onPress={() => alert('Entrar clicado')}>
             <Text style={styles.botaoCad}>Cadastrar-se</Text>
           </TouchableOpacity>
-
-
         </View>
       </View>
       <Sobre />
+      <Carrosel />
+      <Catalogo />
+      
 
 
     </View>
