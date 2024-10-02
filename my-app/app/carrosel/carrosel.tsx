@@ -11,88 +11,88 @@ import {
 
 export default function Carrosel() {
     return (
-        
+
         <SafeAreaView style={styles.container}>
-            <Text>Destaques da Semana</Text>
-            <ScrollView 
-                style={styles.scrollView} 
+            <Text style={styles.destaqueT}>Destaques da Semana</Text>
+            <ScrollView
+                style={styles.scrollView}
                 horizontal={true} // Adiciona a rolagem horizontal
-                showsHorizontalScrollIndicator={false} // Esconde a barra de rolagem horizontal
+                showsHorizontalScrollIndicator={true} // Esconde a barra de rolagem horizontal
             >
-                
+
                 <View style={styles.item}>
                     <Text>O segredo nas sombras</Text>
-                    <Image 
-                        source={require('./img/capalivro.png')} 
-                        style={styles.capalivro} 
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
                     />
                     <Text>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
                     <Text>O segredo nas sombras</Text>
-                    <Image 
-                        source={require('./img/capalivro.png')} 
-                        style={styles.capalivro} 
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
                     />
                     <Text>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
                     <Text>O segredo nas sombras</Text>
-                    <Image 
-                        source={require('./img/capalivro.png')} 
-                        style={styles.capalivro} 
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
                     />
                     <Text>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
                     <Text>O segredo nas sombras</Text>
-                    <Image 
-                        source={require('./img/capalivro.png')} 
-                        style={styles.capalivro} 
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
                     />
                     <Text>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
                     <Text>O segredo nas sombras</Text>
-                    <Image 
-                        source={require('./img/capalivro.png')} 
-                        style={styles.capalivro} 
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
                     />
                     <Text>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
                     <Text>O segredo nas sombras</Text>
-                    <Image 
-                        source={require('./img/capalivro.png')} 
-                        style={styles.capalivro} 
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
                     />
                     <Text>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
                     <Text>O segredo nas sombras</Text>
-                    <Image 
-                        source={require('./img/capalivro.png')} 
-                        style={styles.capalivro} 
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
                     />
                     <Text>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
                     <Text>O segredo nas sombras</Text>
-                    <Image 
-                        source={require('./img/capalivro.png')} 
-                        style={styles.capalivro} 
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
                     />
                     <Text>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
                     <Text>O segredo nas sombras</Text>
-                    <Image 
-                        source={require('./img/capalivro.png')} 
-                        style={styles.capalivro} 
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
                     />
                     <Text>Shóstenes S. Formiga</Text>
                 </View>
-                
+
             </ScrollView>
         </SafeAreaView>
     );
@@ -104,15 +104,24 @@ const styles = StyleSheet.create({
         paddingTop: StatusBar.currentHeight,
     },
     scrollView: {
-        backgroundColor: 'pink',
+        
         marginHorizontal: 20,
     },
     item: {
         marginRight: 20, // Adiciona espaçamento entre os itens
         alignItems: 'center', // Centraliza os itens no eixo vertical
+        fontSize: 60
+        
     },
     capalivro: {
         width: 200,
         height: 300,
+    },
+    destaqueT:{
+        display:'flex',
+        fontSize: 40,
+        justifyContent: 'center',
+        marginBottom: 30,
+        marginTop: 30
     }
 });

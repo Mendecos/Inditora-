@@ -7,7 +7,7 @@ export default function sobre() {
       <View style={styles.sobre}>
         <View>
           <Text style={styles.texto1}>Encontre o que procura na Indie!</Text>
-          <Text>Ainda não sabe qual será  sua próxima leitura? Temos uma coleção cheia de
+          <Text style={styles.texto2}>Ainda não sabe qual será  sua próxima leitura? Temos uma coleção cheia de
             surpresas para você!
           </Text>
 
@@ -27,18 +27,22 @@ export default function sobre() {
 
 const styles = StyleSheet.create({
   logo: {
-    width: 90,
-    height: 60,
+    width: 220,
+    height: 190,
   },
   sobre: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    padding: 80
+    padding: 80,
+    backgroundColor: 'rgba(255, 228, 48, 0.5)' // Fundo 50% de opacidade (RGBA)
   },
   texto1: {
+    fontWeight: 'bold',
     fontSize: 50,
-    
+  },
+  texto2:{
+    fontSize: 21
   }
 
 });

@@ -1,13 +1,12 @@
 import React from 'react';
-import { View, Text, Image, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import Sobre from './corpo/sobre';
-import Carrosel from './carrosel/carrosel'
+import Carrosel from './carrosel/carrosel';
 import Catalogo from './catalogo/catalogo';
-
 
 const Header = () => {
   return (
-    <View>
+    <ScrollView style={styles.scrollView}>
       <View style={styles.header}>
         <View style={styles.logotipo}>
           <Image
@@ -19,8 +18,7 @@ const Header = () => {
             style={styles.logoEscrito}
           />
         </View>
-        <View>
-        </View>
+
         <View style={styles.botoesContainer}>
           <TouchableOpacity onPress={() => alert('Home clicado')}>
             <Text style={styles.botaoTexto}>Home</Text>
@@ -31,27 +29,27 @@ const Header = () => {
           <TouchableOpacity onPress={() => alert('Sobre Nós clicado')}>
             <Text style={styles.botaoTexto}>Sobre Nós</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert('Entrar clicado')} >
+          <TouchableOpacity onPress={() => alert('Entrar clicado')}>
             <Text style={styles.botaoEntrar}>Entrar</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert('Entrar clicado')}>
+          <TouchableOpacity onPress={() => alert('Cadastrar clicado')}>
             <Text style={styles.botaoCad}>Cadastrar-se</Text>
           </TouchableOpacity>
         </View>
       </View>
+
       <Sobre />
       <Carrosel />
       <Catalogo />
-      
-
-
-    </View>
-
+    </ScrollView>
   );
 };
 
-
 const styles = StyleSheet.create({
+  scrollView: {
+    flex: 1, // Permite que a barra de rolagem ocupe todo o espaço disponível
+    
+  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -61,7 +59,7 @@ const styles = StyleSheet.create({
   },
   logotipo: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   logoEscrito: {
     width: 200,
@@ -73,11 +71,10 @@ const styles = StyleSheet.create({
   },
   botoesContainer: {
     flexDirection: 'row',
-
   },
   botaoTexto: {
     marginHorizontal: 15, // Espaçamento entre os textos (botões)
-    color: 'white'
+    color: 'white',
   },
   botaoEntrar: {
     marginHorizontal: 15,
@@ -88,11 +85,8 @@ const styles = StyleSheet.create({
     color: 'white',
     padding: 8,
     borderRadius: 5,
-    marginHorizontal: 15
-  }
-
-
+    marginHorizontal: 15,
+  },
 });
 
 export default Header;
-

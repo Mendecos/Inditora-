@@ -55,15 +55,14 @@ export default function Catalogo() {
 const styles = StyleSheet.create({
     container: {
         display: 'flex',
-    
+        
     },
     View: {
         backgroundColor: 'pink',
-        marginHorizontal: 20,
-        justifyContent:'center'
-
+    
     },
     item: {
+        display: 'flex',
         
     },
     capalivro: {
