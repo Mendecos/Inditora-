@@ -5,13 +5,7 @@ import LoginPage from "./(screens)/LoginPage";
 import LandingPage from "./(screens)/LandingPage";
 import Logado from "./(screens)/LogadoPage";
 
-type RootStackParamList = {
-  Landing: undefined;
-  Login: undefined;
-  Logado: { email: string }; // Definindo o parâmetro 'email' para a rota 'Logado'
-};
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator();
 
 function App() {
   return (
