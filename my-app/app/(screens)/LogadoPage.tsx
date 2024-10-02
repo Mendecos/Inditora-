@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 export default function Logado({ route }: { route: any }) {
-  const { email } = route.params; // Acessando o parâmetro e-mail
+  const { email } = route.params;
 
   return (
     <View style={styles.container}>

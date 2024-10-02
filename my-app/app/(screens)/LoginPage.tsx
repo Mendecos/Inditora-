@@ -5,11 +5,11 @@ export default function LoginPage({ navigation }: { navigation: any }) {
   console.log(navigation);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [wrongInput, setWrongInput] = useState(false);
+  const [wrongInput, setWrongInput] = useState(true);
 
   const handleLogin = () => {
-    const validEmail = "waloch@senacrs.com.br";
-    const validPassword = "123456";
+    const validEmail = "rodrigo.a42@gmail.com";
+    const validPassword = "bemlegal";
 
     if (email === validEmail && password === validPassword) {
       navigation.navigate("Logado", { email });
