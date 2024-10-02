@@ -40,7 +40,7 @@ const Header = () => {
 
       <Sobre />
       <Carrosel />
-      <Catalogo />
+
     </ScrollView>
   );
 };

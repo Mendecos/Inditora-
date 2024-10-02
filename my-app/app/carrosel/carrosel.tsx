@@ -21,77 +21,102 @@ export default function Carrosel() {
             >
 
                 <View style={styles.item}>
-                    <Text>O segredo nas sombras</Text>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
                     <Image
                         source={require('./img/capalivro.png')}
                         style={styles.capalivro}
                     />
-                    <Text>Shóstenes S. Formiga</Text>
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
-                    <Text>O segredo nas sombras</Text>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
                     <Image
                         source={require('./img/capalivro.png')}
                         style={styles.capalivro}
                     />
-                    <Text>Shóstenes S. Formiga</Text>
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
-                    <Text>O segredo nas sombras</Text>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
                     <Image
                         source={require('./img/capalivro.png')}
                         style={styles.capalivro}
                     />
-                    <Text>Shóstenes S. Formiga</Text>
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
-                    <Text>O segredo nas sombras</Text>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
                     <Image
                         source={require('./img/capalivro.png')}
                         style={styles.capalivro}
                     />
-                    <Text>Shóstenes S. Formiga</Text>
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
-                    <Text>O segredo nas sombras</Text>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
                     <Image
                         source={require('./img/capalivro.png')}
                         style={styles.capalivro}
                     />
-                    <Text>Shóstenes S. Formiga</Text>
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
-                    <Text>O segredo nas sombras</Text>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
                     <Image
                         source={require('./img/capalivro.png')}
                         style={styles.capalivro}
                     />
-                    <Text>Shóstenes S. Formiga</Text>
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
-                    <Text>O segredo nas sombras</Text>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
                     <Image
                         source={require('./img/capalivro.png')}
                         style={styles.capalivro}
                     />
-                    <Text>Shóstenes S. Formiga</Text>
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
-                    <Text>O segredo nas sombras</Text>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
                     <Image
                         source={require('./img/capalivro.png')}
                         style={styles.capalivro}
                     />
-                    <Text>Shóstenes S. Formiga</Text>
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
                 </View>
                 <View style={styles.item}>
-                    <Text>O segredo nas sombras</Text>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
                     <Image
                         source={require('./img/capalivro.png')}
                         style={styles.capalivro}
                     />
-                    <Text>Shóstenes S. Formiga</Text>
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
                 </View>
+                <View style={styles.item}>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
+                    />
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
+                </View>
+                <View style={styles.item}>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
+                    />
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
+                </View>
+                <View style={styles.item}>
+                    <Text style={styles.itemTexto}>O segredo nas sombras</Text>
+                    <Image
+                        source={require('./img/capalivro.png')}
+                        style={styles.capalivro}
+                    />
+                    <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
+                </View>
+
 
             </ScrollView>
         </SafeAreaView>
@@ -104,24 +129,27 @@ const styles = StyleSheet.create({
         paddingTop: StatusBar.currentHeight,
     },
     scrollView: {
-        
+
         marginHorizontal: 20,
     },
     item: {
         marginRight: 20, // Adiciona espaçamento entre os itens
         alignItems: 'center', // Centraliza os itens no eixo vertical
-        fontSize: 60
-        
+        padding: 10
+
     },
     capalivro: {
         width: 200,
         height: 300,
     },
-    destaqueT:{
-        display:'flex',
+    destaqueT: {
+        display: 'flex',
         fontSize: 40,
         justifyContent: 'center',
         marginBottom: 30,
         marginTop: 30
+    },
+    itemTexto: {
+        fontSize: 25
     }
 });
