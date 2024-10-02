@@ -1,92 +1,32 @@
-import React from 'react';
-import { View, Text, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
-import Sobre from './corpo/sobre';
-import Carrosel from './carrosel/carrosel';
-import Catalogo from './catalogo/catalogo';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import LoginPage from "./(screens)/LoginPage";
+import LandingPage from "./(screens)/LandingPage";
+import Logado from "./(screens)/LogadoPage";
 
-const Header = () => {
-  return (
-    <ScrollView style={styles.scrollView}>
-      <View style={styles.header}>
-        <View style={styles.logotipo}>
-          <Image
-            source={require('./img/logo.png')} // Caminho para a imagem local
-            style={styles.logo}
-          />
-          <Image
-            source={require('./img/logoescrito.png')} // Caminho para a imagem local
-            style={styles.logoEscrito}
-          />
-        </View>
-
-        <View style={styles.botoesContainer}>
-          <TouchableOpacity onPress={() => alert('Home clicado')}>
-            <Text style={styles.botaoTexto}>Home</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert('Livros clicado')}>
-            <Text style={styles.botaoTexto}>Livros</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert('Sobre Nós clicado')}>
-            <Text style={styles.botaoTexto}>Sobre Nós</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert('Entrar clicado')}>
-            <Text style={styles.botaoEntrar}>Entrar</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert('Cadastrar clicado')}>
-            <Text style={styles.botaoCad}>Cadastrar-se</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-
-      <Sobre />
-      <Carrosel />
-
-    </ScrollView>
-  );
+type RootStackParamList = {
+  Landing: undefined;
+  Login: undefined;
+  Logado: { email: string }; // Definindo o parâmetro 'email' para a rota 'Logado'
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    flex: 1, // Permite que a barra de rolagem ocupe todo o espaço disponível
-    
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: 'black',
-  },
-  logotipo: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  logoEscrito: {
-    width: 200,
-    height: 50,
-  },
-  logo: {
-    width: 90,
-    height: 60,
-  },
-  botoesContainer: {
-    flexDirection: 'row',
-  },
-  botaoTexto: {
-    marginHorizontal: 15, // Espaçamento entre os textos (botões)
-    color: 'white',
-  },
-  botaoEntrar: {
-    marginHorizontal: 15,
-    color: 'orange',
-  },
-  botaoCad: {
-    backgroundColor: 'purple',
-    color: 'white',
-    padding: 8,
-    borderRadius: 5,
-    marginHorizontal: 15,
-  },
-});
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
-export default Header;
+function App() {
+  return (
+    <NavigationContainer independent={true}>
+      <Stack.Navigator initialRouteName="Landing">
+        <Stack.Screen
+          name="Landing"
+          options={{ headerShown: false }}
+          component={LandingPage}
+        />
+        <Stack.Screen name="Login" component={LoginPage} />
+        <Stack.Screen name="Logado" component={Logado} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
