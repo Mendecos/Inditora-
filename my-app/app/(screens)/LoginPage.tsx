@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { View, TextInput, Button, Text, StyleSheet } from "react-native";
 
 export default function LoginPage({ navigation }: { navigation: any }) {
-  console.log(navigation);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [wrongInput, setWrongInput] = useState(true);
+  const [wrongInput, setWrongInput] = useState(false);
 
   const handleLogin = () => {
     const validEmail = "rodrigo.a42@gmail.com";
-    const validPassword = "bemlegal";
+    const validPassword = "rodrigobemlegal";
 
     if (email === validEmail && password === validPassword) {
       navigation.navigate("Logado", { email });

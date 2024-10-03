@@ -1,13 +1,24 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 
 export default function Logado({ route }: { route: any }) {
   const { email } = route.params;
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Bem-vindo à Tela Inicial!</Text>
-      <Text style={styles.title}>Seu e-mail é: {email}</Text>
+      <Text style={styles.title}>Seu Login foi feito com sucesso!</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("LandingPage")}>
+        <Text style={styles.botaoTexto}>
+          Clique aqui para ir para Página Inicial
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -20,5 +31,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
+  },
+  botaoTexto: {
+    marginHorizontal: 15, // Espaçamento entre os textos (botões)
+    color: "red",
   },
 });

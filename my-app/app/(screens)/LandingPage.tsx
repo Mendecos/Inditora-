@@ -35,11 +35,8 @@ function LandingPage() {
           <TouchableOpacity>
             <Text style={styles.botaoTexto}>Sobre Nós</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("LoginPage")}>
-            <Text style={styles.botaoTexto}>Entrar</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert("Cadastrar clicado")}>
-            <Text style={styles.botaoCad}>Cadastrar-se</Text>
+          <TouchableOpacity onPress={() => navigation.navigate("/")}>
+            <Text style={styles.botaoTexto}>Sair</Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -12,6 +12,10 @@ export default function RootLayout() {
         name="(screens)/LogadoPage"
         options={{ headerShown: false }}
       />
+      <Stack.Screen
+        name="(screens)/LandingPage"
+        options={{ headerShown: false }}
+      />
     </Stack>
   );
 }
