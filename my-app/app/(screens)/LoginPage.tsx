@@ -43,7 +43,12 @@ export default function LoginPage({ navigation }: { navigation: any }) {
         {wrongInput && (
           <Text style={styles.alertText}>E-mail ou senha incorretos!</Text>
         )}
-        <Button title="Acessar" onPress={handleLogin} />
+        <Button title="Acessar" onPress={handleLogin} color="orange" />
+        <View style={styles.outraFormaLogin}>
+          <Text>
+            Ou entre com
+          </Text>
+        </View>
       </View>
     </View>
   );
@@ -51,30 +56,36 @@ export default function LoginPage({ navigation }: { navigation: any }) {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     display: 'flex',
-    flexDirection:'row',
-    justifyContent:'center',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
     padding: 120,
     backgroundColor: "rgba(255, 228, 48, 0.5)"
 
   },
   loginBox: {
-    marginLeft:40
+    marginLeft: 40,
+    backgroundColor: 'purple',
+    borderRadius: 12,
+    padding: 20, // Adiciona espaço interno
 
   },
   textBox: {
-    marginRight:120,
-    backgroundColor: 'purple',
-    borderRadius: 12,
-    marginBottom: 60
-
+    marginRight: 120,
+    marginBottom: 60,
+    padding: 20, // Adiciona espaço interno
+    textAlign: 'center', // Centraliza o texto
+    justifyContent: 'center', // Centraliza verticalmente
+    fontSize: 30
   },
   titleLogin: {
     fontSize: 34,
     marginBottom: 16,
     textAlign: "center",
     fontWeight: "bold",
-    
+    color: 'white'
+
   },
   input: {
     height: 40,
@@ -91,4 +102,11 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   
+  outraFormaLogin:{
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: 89
+
+  }
+
 });
