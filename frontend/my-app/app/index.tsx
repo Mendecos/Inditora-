@@ -1,9 +1,9 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import LoginPage from "../frontend/(screens)/LoginPage";
-import LandingPage from "../frontend/(screens)/LandingPage";
-import Logado from "../frontend/(screens)/LogadoPage";
+import LoginPage from "../(screens)/LoginPage";
+import LandingPage from "../(screens)/LandingPage";
+import Logado from "../(screens)/LogadoPage";
 
 const Stack = createNativeStackNavigator();
 
