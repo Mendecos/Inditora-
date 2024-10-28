@@ -7,7 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import Carrosel from "../componentes/carrossel/Carrossel";
+import Carrosel from "./componentes/carrossel/Carrossel";
 import Sobre from "./Sobre";
 
 function LandingPage() {
