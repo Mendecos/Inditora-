@@ -21,7 +21,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -29,7 +29,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -37,7 +37,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -45,7 +45,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -53,7 +53,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -61,7 +61,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -69,7 +69,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -77,7 +77,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -85,7 +85,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -93,7 +93,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -101,7 +101,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>
@@ -109,7 +109,7 @@ export default function Carrosel() {
         <View style={styles.item}>
           <Text style={styles.itemTexto}>O segredo nas sombras</Text>
           <Image
-            source={require("./img/capalivro.png")}
+            source={require("../img/carrossel/capalivro.png")}
             style={styles.capalivro}
           />
           <Text style={styles.itemTexto}>Shóstenes S. Formiga</Text>

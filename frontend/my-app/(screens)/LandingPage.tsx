@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Carrosel from "./componentes/carrossel/Carrossel";
-import Sobre from "./Sobre";
+import Sobre from "./componentes/sobre/Sobre";
 
 function LandingPage() {
   return (
@@ -16,11 +16,11 @@ function LandingPage() {
       <View style={styles.header}>
         <View style={styles.logotipo}>
           <Image
-            source={require("../componentes/img/logo.png")} // Caminho para a imagem local
+            source={require("./componentes/img/landingpage/logo.png")} // Caminho para a imagem local
             style={styles.logo}
           />
           <Image
-            source={require("../componentes/img/logoescrito.png")} // Caminho para a imagem local
+            source={require("./componentes/img/landingpage/logoescrito.png")} // Caminho para a imagem local
             style={styles.logoEscrito}
           />
         </View>

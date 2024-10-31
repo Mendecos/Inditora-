@@ -14,7 +14,7 @@ export default function Sobre() {
         </View>
         <View>
           <Image
-            source={require("../componentes/img/logo.png")} // Caminho para a imagem local
+            source={require("../img/landingpage/logo.png")} // Caminho para a imagem local
             style={styles.logo}
           />
         </View>
