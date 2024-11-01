@@ -9,10 +9,6 @@ export default function RootLayout() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="(screens)/LogadoPage"
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
         name="(screens)/LandingPage"
         options={{ headerShown: false }}
       />
