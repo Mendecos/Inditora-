@@ -11,7 +11,7 @@ export default function LoginPage({ navigation }: { navigation: any }) {
     const validPassword = "123";
 
     if (email === validEmail && password === validPassword) {
-      navigation.navigate("Logado", { email });
+      navigation.navigate("Landing", { email });
     } else {
       setWrongInput(true);
     }
