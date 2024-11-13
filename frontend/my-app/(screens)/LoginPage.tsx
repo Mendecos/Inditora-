@@ -1,38 +1,95 @@
 import React, { useState } from "react";
-import { View, TextInput, Button, Text, StyleSheet, Image } from "react-native";
+import {
+  View,
+  TextInput,
+  Button,
+  Text,
+  StyleSheet,
+  Image,
+  Alert,
+} from "react-native";
 
 export default function LoginPage({ navigation }: { navigation: any }) {
+  // Estados para o formulário de login
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [wrongInput, setWrongInput] = useState(false);
 
-  const handleLogin = () => {
-    const validEmail = "rodgab.com";
-    const validPassword = "123";
+  // Estados para o formulário de cadastro
+  const [nomeCadastro, setNomeCadastro] = useState("");
+  const [emailCadastro, setEmailCadastro] = useState("");
+  const [senhaCadastro, setSenhaCadastro] = useState("");
 
-    if (email === validEmail && password === validPassword) {
-      navigation.navigate("Landing", { email });
-    } else {
-      setWrongInput(true);
+  const handleLogin = async () => {
+    try {
+      const response = await fetch(`http://localhost:8000/usuarios/${email}`);
+      const usuario = await response.json();
+
+      if (usuario && usuario.senha === password) {
+        navigation.navigate("Landing", { email });
+      } else {
+        setWrongInput(true);
+        Alert.alert("Erro", "E-mail ou senha incorretos!");
+      }
+    } catch (error) {
+      Alert.alert("Erro", "Algo deu errado");
+    }
+  };
+
+  const handleCadastro = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/usuarios", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nome: nomeCadastro,
+          email: emailCadastro,
+          senha: senhaCadastro,
+        }),
+      });
+
+      if (response.ok) {
+        Alert.alert("Sucesso", "Usuário cadastrado com sucesso!");
+      } else {
+        Alert.alert("Erro", "Falha ao cadastrar. Verifique os campos.");
+      }
+    } catch (error) {
+      Alert.alert("Erro", "Algo deu errado");
     }
   };
 
   return (
     <View style={styles.container}>
-      <View style={styles.curiosidade}>
-        <Text style={styles.textBox}>Curiosidade sobre leitura</Text>
-        <Text style={styles.textBox2}>
-          Ler em silêncio era considerado uma heresia Uma vez que a literacia
-          foi um privilégio reservado a uma elite durante milhares de anos, a
-          leitura começou por ser uma atividade oral e coletiva. Desde a Roma
-          Antiga até ao século XIX, as sessões de leituras públicas eram uma
-          forma de entretenimento tão popular como os malabaristas ou os bobos
-          na corte. Para além disso, esta era uma forma de continuar a preservar
-          a transmissão de obras banidas pelas autoridades, das quais foram
-          exemplo as obras de Jean-Jacques Rousseau.
-        </Text>
-        <Text style={styles.textBox2}>Fonte: amoreiras.com</Text>
+      {/* Formulário de Cadastro */}
+      <View style={styles.cadastroBox}>
+        <Text style={styles.titleCadastro}>Cadastre-se</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Nome"
+          value={nomeCadastro}
+          onChangeText={setNomeCadastro}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="E-mail"
+          value={emailCadastro}
+          onChangeText={setEmailCadastro}
+          keyboardType="email-address"
+          autoCapitalize="none"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Senha"
+          value={senhaCadastro}
+          onChangeText={setSenhaCadastro}
+          secureTextEntry
+        />
+        <Button title="Cadastrar" onPress={handleCadastro} color="orange" />
       </View>
+
+      {/* Formulário de Login */}
       <View style={styles.loginBox}>
         <Text style={styles.titleLogin}>Entre na sua conta</Text>
         <TextInput
@@ -80,30 +137,30 @@ export default function LoginPage({ navigation }: { navigation: any }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 120,
+    padding: 20,
     backgroundColor: "rgba(255, 228, 48, 0.5)",
   },
+  cadastroBox: {
+    flex: 1,
+    backgroundColor: "white",
+    borderRadius: 12,
+    padding: 20,
+    marginRight: 20,
+  },
+  titleCadastro: {
+    fontSize: 34,
+    marginBottom: 16,
+    textAlign: "center",
+    fontWeight: "bold",
+    color: "black",
+  },
   loginBox: {
-    marginLeft: 40,
+    flex: 1,
     backgroundColor: "purple",
     borderRadius: 12,
-    padding: 20, // Adiciona espaço interno
-  },
-  textBox: {
-    padding: 20, // Adiciona espaço interno
-    textAlign: "center", // Centraliza o texto
-    justifyContent: "center", // Centraliza verticalmente
-    fontSize: 30,
-    fontWeight: "bold",
-  },
-  textBox2: {
-    fontSize: 20,
-    textAlign: "left", // Garante o alinhamento à esquerda
-    maxWidth: 400, // Define uma largura máxima para o texto quebrar
-    lineHeight: 24, // Aumenta a altura da linha para facilitar a leitura
+    padding: 20,
   },
   titleLogin: {
     fontSize: 34,
@@ -117,38 +174,25 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderWidth: 1,
     marginBottom: 12,
-    paddingHorizontal: 50,
-    textAlign: "left",
+    paddingHorizontal: 10,
     backgroundColor: "white",
   },
   alertText: {
     color: "red",
-    marginHorizontal: "auto",
     marginBottom: 12,
   },
-
   outraFormaLogin: {
-    display: "flex",
     alignItems: "center",
-    marginTop: 60,
+    marginTop: 20,
   },
   logos: {
-    width: 30, // Defina a largura desejada
-    height: 30, // Defina a altura desejada
-    resizeMode: "contain", // Esta propriedade garante que a imagem mantenha a proporção original
-    marginHorizontal: 10, // Adiciona espaçamento entre as imagens (opcional)
+    width: 30,
+    height: 30,
+    resizeMode: "contain",
+    marginHorizontal: 10,
   },
   Iconlogos: {
-    display: "flex",
     flexDirection: "row",
-    marginTop: 100,
-  },
-  curiosidade: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: 20,
-    backgroundColor: "white",
-    borderRadius: 12,
+    marginTop: 10,
   },
 });

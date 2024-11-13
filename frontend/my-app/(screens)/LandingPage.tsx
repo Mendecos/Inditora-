@@ -10,7 +10,7 @@ import {
 import Carrosel from "./componentes/carrossel/Carrossel";
 import Sobre from "./componentes/sobre/Sobre";
 
-function LandingPage() {
+function LandingPage({ navigation }: { navigation: any }) {
   return (
     <ScrollView style={styles.scrollView}>
       <View style={styles.header}>
@@ -35,7 +35,7 @@ function LandingPage() {
           <TouchableOpacity>
             <Text style={styles.botaoTexto}>Sobre Nós</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("/")}>
+          <TouchableOpacity onPress={() => navigation.navigate("Login")}>
             <Text style={styles.botaoTexto}>Sair</Text>
           </TouchableOpacity>
         </View>
